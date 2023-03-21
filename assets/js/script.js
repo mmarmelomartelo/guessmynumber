@@ -1,5 +1,7 @@
 let secretNumber = Math.trunc(Math.random() * 30) + 1;
 let score = 30;
+let highscore = 0;
+
 console.log("we are connected");
 document.querySelector(".number").textContent = secretNumber;
 document.querySelector(".again").addEventListener("click", function() {
@@ -26,6 +28,10 @@ document.querySelector(".check").addEventListener("click", function() {
         document.querySelector(".number").textContent = secretNumber;
         document.querySelector("body").style.backgroundColor = "#60b347";
         document.querySelector('.number').style.width = '30rem';
+        if (score > highscore) {
+            highscore = score;
+            document.querySelector(".highscore").textContent = highscore;
+        }
 
     } else if (guess > secretNumber) {
         document.querySelector(".message").textContent = " 📈Too high!";
