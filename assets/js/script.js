@@ -9,6 +9,8 @@ document.querySelector(".check").addEventListener("click", function() {
 
     } else if (guess === secreNumber) {
         document.querySelector(".message").textContent = " 🎉Correct Number!";
+
+        document.querySelector("body").style.backgroundColor = "#60b347";
     } else if (guess > secreNumber) {
         document.querySelector(".message").textContent = " 📈Too high!";
         score--;
@@ -21,6 +23,7 @@ document.querySelector(".check").addEventListener("click", function() {
 
     if (score <= 0) {
         document.querySelector(".message").textContent = "😣 Game over!"
+        document.querySelector("body").style.backgroundColor = "#a84c32";
 
     }
 })
