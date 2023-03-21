@@ -1,5 +1,18 @@
-const secretNumber = Math.trunc(Math.random() * 30) + 1;
+let secretNumber = Math.trunc(Math.random() * 30) + 1;
 let score = 30;
+console.log("we are connected");
+document.querySelector(".number").textContent = secretNumber;
+document.querySelector(".again").addEventListener("click", function() {
+    score = 30;
+    secretNumber = Math.trunc(Math.random() * 30) + 1;
+    document.querySelector(".message").textContent = "Start guessing...";
+    document.querySelector(".score").textContent = score;
+    document.querySelector(".number").textContent = "?";
+    document.querySelector(".guess").textContent = "";
+    document.querySelector("body").style.backgroundColor = "#636363";
+    document.querySelector('.number').style.width = '15rem';
+
+});
 
 
 document.querySelector(".check").addEventListener("click", function() {
