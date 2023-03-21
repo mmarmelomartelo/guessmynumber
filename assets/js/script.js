@@ -1,6 +1,6 @@
 const secreNumber = Math.trunc(Math.random() * 30) + 1;
 document.querySelector(".number").textContent = secreNumber;
-
+let score = 30;
 document.querySelector(".check").addEventListener("click", function() {
     const guess = Number(document.querySelector(".guess").value);
 
@@ -11,9 +11,16 @@ document.querySelector(".check").addEventListener("click", function() {
         document.querySelector(".message").textContent = " 🎉Correct Number!";
     } else if (guess > secreNumber) {
         document.querySelector(".message").textContent = " 📈Too high!";
+        score--;
+        document.querySelector(".score").textContent = score;
     } else if (guess < secreNumber) {
         document.querySelector(".message").textContent = " 📉Too low!";
+        score--;
+        document.querySelector(".score").textContent = score;
     }
 
+    if (score <= 0) {
+        document.querySelector(".message").textContent = "😣 Game over!"
 
+    }
 })
