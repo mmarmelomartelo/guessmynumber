@@ -38,8 +38,11 @@ document.querySelector(".check").addEventListener("click", function() {
     }
 
     if (score <= 0) {
-        document.querySelector(".message").textContent = "😣 Game Over!"
+        document.querySelector(".message").textContent = "💥 You lost the game!"
+        document.querySelector(".number").textContent = "😣 Game Over!!!";
         document.querySelector("body").style.backgroundColor = "#a84c32";
+        document.querySelector('.number').style.width = '50rem';
+        document.querySelector(".score").textContent = "💥 You lost the game!"
 
     }
 })
