@@ -6,8 +6,8 @@ let highscore = 0;
 const displayMessage = function(message) {
     document.querySelector(".message").textContent = message;
 }
-// start the again //
-document.querySelector(".number").textContent = secretNumber;
+// start the game again //
+
 document.querySelector(".again").addEventListener("click", function() {
     score = 30;
     secretNumber = Math.trunc(Math.random() * 30) + 1;
@@ -25,12 +25,13 @@ document.querySelector(".again").addEventListener("click", function() {
 document.querySelector(".check").addEventListener("click", function() {
     const guess = Number(document.querySelector(".guess").value);
 
+
     // when the input is empty //
     if (!guess) {
         displayMessage("🖐 No a number!");
 
     } else if (guess > 30) {
-        displayMessage("don't be sylly, the number must be betwwen 1 and 30");
+        displayMessage("Am I a joke for you? the number must be betwwen 1 and 30");
 
 
         // when the guess is correct //
