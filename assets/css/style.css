@@ -151,7 +151,7 @@ h1 {
 
     .label-score {
         font-size: 1.5rem;
-        width: -4rem;
+        width: 0.1rem;
         padding: 2rem 0rem;
     }
 
@@ -173,7 +173,7 @@ h1 {
         font-size: 2rem;
         width: 70%;
         margin-bottom: 2rem;
-        padding: auto;
+
     }
 
     /* adjust font size of button */
@@ -181,3 +181,4 @@ h1 {
         font-size: 1.0rem;
         padding: 1.5rem 3rem;
     }
+}
