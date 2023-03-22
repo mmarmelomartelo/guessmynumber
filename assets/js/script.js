@@ -29,6 +29,10 @@ document.querySelector(".check").addEventListener("click", function() {
     if (!guess) {
         displayMessage("🖐 No a number!");
 
+    } else if (guess > 30) {
+        displayMessage("don't be sylly, the number must be betwwen 1 and 30");
+
+
         // when the guess is correct //
     } else if (guess === secretNumber) {
         displayMessage("🎉Correct Number!");
